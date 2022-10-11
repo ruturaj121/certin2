@@ -25,7 +25,7 @@ app.get("/", function (req, res) {
   res.sendFile("index.html");
 });
 
-app.post("/data", function (req, res) {
+app.post("/", function (req, res) {
   const { email, sub, links } = req.body;
   res.send(email, sub, links);
   async function example() {
