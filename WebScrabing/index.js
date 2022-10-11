@@ -34,7 +34,9 @@ app.post("/", function (req, res) {
       width: 640,
       height: 480,
     };
-
+  chrome.setDefaultService(
+      new chrome.ServiceBuilder(chromedriver.path).build()
+    );
     let driver = new Builder()
       .forBrowser("chrome")
       .setChromeOptions(new chrome.Options().headless().windowSize(screen))
